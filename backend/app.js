@@ -123,7 +123,7 @@ app.put('/post-image', async (req, res, next) => {
 			clearImage(req.body.oldPath);
 		}
 
-		console.log('s3 bucket image path', `https://${process.env.AWS_BUCKET_NAME}.s3.${process.env.AWS_REGION}.amazonaws.com/${s3Key}`);
+		// console.log('s3 bucket image path', `https://${process.env.AWS_BUCKET_NAME}.s3.${process.env.AWS_REGION}.amazonaws.com/${s3Key}`);
 		res.status(201).json({
 			message: 'File uploaded to S3 successfully',
 			fileUrl: `https://${process.env.AWS_BUCKET_NAME}.s3.${process.env.AWS_REGION}.amazonaws.com/${s3Key}`
