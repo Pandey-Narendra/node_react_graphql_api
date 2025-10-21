@@ -32,7 +32,7 @@ class Feed extends Component {
         }
       `
 		};
-		fetch('http://localhost:8080/graphql', {
+		fetch(`${process.env.REACT_APP_API_URL}/graphql`, {
 			method: 'POST',
 			headers: {
 				Authorization: 'Bearer ' + this.props.token,
@@ -90,7 +90,7 @@ class Feed extends Component {
 				page: page
 			}
 		};
-		fetch('http://localhost:8080/graphql', {
+		fetch(`${process.env.REACT_APP_API_URL}/graphql`, {
 			method: 'POST',
 			headers: {
 				Authorization: 'Bearer ' + this.props.token,
@@ -138,7 +138,7 @@ class Feed extends Component {
 				userStatus: this.state.status
 			}
 		};
-		fetch('http://localhost:8080/graphql', {
+		fetch(`${process.env.REACT_APP_API_URL}/graphql`, {
 			method: 'POST',
 			headers: {
 				Authorization: 'Bearer ' + this.props.token,
@@ -191,7 +191,7 @@ class Feed extends Component {
 		console.log('formData', formData);
 
 		// update Image
-		fetch('http://localhost:8080/post-image', {
+		fetch(`${process.env.REACT_APP_API_URL}/post-image`, {
 			method: 'PUT',
 			headers: {
 				Authorization: 'Bearer ' + this.props.token
@@ -255,7 +255,7 @@ class Feed extends Component {
 					};
 				}
 
-				return fetch('http://localhost:8080/graphql', {
+				return fetch(`${process.env.REACT_APP_API_URL}/graphql`, {
 					method: 'POST',
 					body: JSON.stringify(graphqlQuery),
 					headers: {
@@ -341,7 +341,7 @@ class Feed extends Component {
         }
       `
 		};
-		fetch('http://localhost:8080/graphql', {
+		fetch(`${process.env.REACT_APP_API_URL}/graphql`, {
 			method: 'POST',
 			headers: {
 				Authorization: 'Bearer ' + this.props.token,

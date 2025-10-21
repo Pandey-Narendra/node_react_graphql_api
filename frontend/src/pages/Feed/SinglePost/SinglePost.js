@@ -31,7 +31,7 @@ class SinglePost extends Component {
         postId: postId
       }
     };
-    fetch('http://localhost:8080/graphql', {
+    fetch(`${process.env.REACT_APP_API_URL}/graphql`, {
       method: 'POST',
       headers: {
         Authorization: 'Bearer ' + this.props.token,
