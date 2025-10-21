@@ -18,6 +18,8 @@ exports.getPosts = async (req, res, next) => {
       .skip((currentPage - 1) * perPage)
       .limit(perPage);
 
+      console.log('feed js get posts backend', posts);
+
     res.status(200).json({
       message: 'Fetched posts successfully.',
       posts: posts,
